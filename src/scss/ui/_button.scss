@@ -1,0 +1,92 @@
+:root
+{
+    --button-background-color: var(--color-muted);
+    --button-foreground-color: var(--color-muted-foreground);
+    --button-secondary-color: var(--color-muted-foreground);
+    --button-border-color: var(--color-muted);
+}
+
+.btn
+{
+    border: 1px solid rgb(var(--button-border-color));
+    background-color: rgb(var(--button-background-color));
+    color: rgb(var(--button-foreground-color));
+    box-sizing: border-box;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 8px 14px;
+    cursor: pointer;
+    display: inline-block;
+    transition: .25s;
+
+    &.btn-soft
+    {
+        background-color: rgba(var(--button-background-color), .25);
+        color: rgb(var(--button-secondary-color));
+        border-color: transparent;
+
+        &:hover
+        {
+            background-color: rgb(var(--button-background-color));
+            color: rgb(var(--button-foreground-color));
+        }
+    }
+
+    &.btn-outline,
+    &.btn-action
+    {
+        background-color: rgba(var(--button-background-color), 0);
+        color: rgb(var(--button-secondary-color));
+
+        &:hover
+        {
+            background-color: rgba(var(--button-background-color), .35);
+            color: rgb(var(--button-secondary-color));
+        }
+
+        .btn-active,
+        &:active
+        {
+            background-color: rgba(var(--button-background-color), .45);
+            color: rgb(var(--button-secondary-color));
+        }
+    }
+
+    &.btn-action
+    {
+        border-color: transparent;
+    }
+
+    &.btn-outline
+    {
+        border-color: rgba(var(--button-secondary-color), .3);
+    }
+}
+
+.btn-small
+{
+    font-size: 14px;
+    padding: 6px 8px;
+}
+
+.btn-large
+{
+    padding: 14px 18px;
+}
+
+.btn-block
+{
+    display: block;
+    width: 100%;
+}
+
+@include colors() using ( $key, $color, $text-color )
+{
+    .btn-#{$key}
+    {
+        --button-background-color: #{"var(--color-" + $key + ")"};
+        --button-foreground-color: #{"var(--color-" + $key + "-foreground)"};
+        --button-secondary-color: #{"var(--color-" + $key + ")"};
+        --button-border-color: #{"var(--color-" + $key + ")"};
+    }
+}

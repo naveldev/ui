@@ -1,0 +1,27 @@
+// Badge
+:root
+{
+    --badge-background-color: var(--color-gray);
+    --badge-foreground-color: var(--color-gray-foreground);
+}
+
+.badge
+{
+    background-color: rgb(var(--badge-background-color));
+    color: rgb(var(--badge-foreground-color));
+    box-sizing: border-box;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-size: .8rem;
+}
+
+@include colors() using ( $key, $color, $text-color )
+{
+    .badge-#{$key}
+    {
+        --badge-background-color: #{"var(--color-" + $key + ")"};
+        --badge-foreground-color: #{"var(--color-" + $key + "-foreground)"};
+    }
+}

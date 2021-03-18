@@ -1,0 +1,36 @@
+$name: 'light'; // Theme name
+
+// Colors
+$colors: (
+    "primary": "3, 107, 252",
+    "info": "67, 155, 249",
+    "succes": "0, 184, 148",
+    "warning": "255, 183, 61",
+    "danger": "255, 55, 48",
+    "light": "255, 255, 255",
+    "gray": "218, 218, 218",
+    "muted": "163, 163, 163",
+    "dark": "0, 0, 0",
+
+    // Brands
+    "steam": "27, 40, 56",
+);
+
+// Text colors
+$text-colors: (
+    "primary": "var(--color-light)",
+    "info": "var(--color-light)",
+    "succes": "var(--color-light)",
+    "warning": "var(--color-light)",
+    "danger": "var(--color-light)",
+    "light": "var(--color-dark)",
+    "gray": "var(--color-dark)",
+    "muted": "var(--color-dark)",
+    "dark": "var(--color-light)",
+
+    // Brands
+    "steam": "var(--color-light)",
+);
+
+// Add theme
+$themes: map-merge($themes, ($name: ('colors': $colors, 'text-colors': $text-colors)));

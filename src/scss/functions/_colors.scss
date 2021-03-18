@@ -1,0 +1,14 @@
+@use "sass:list";
+@use "sass:map";
+
+@function addTheme( $name, $colors, $text-colors )
+{
+    $theme: ($name: (
+        'colors': $colors,
+        'text-colors': $text-colors,
+    ));
+
+    $themes: list.append($themes, $theme);
+
+    @return $themes;
+}

@@ -1,0 +1,33 @@
+///*
+// * Loop through the themes (except [$default-theme])
+// */
+@mixin themes( $list: $themes )
+{
+    // Remove the default theme
+    $list: map-remove($list, $default-theme);
+
+    // Loop through the themes, and return the [$name], [$colors], [$text-colors]
+    @each $theme, $test in $list {
+        @include theme( $theme ) using ( $name, $colors, $text-colors ) {
+            @content( $name, $colors, $text-colors );
+        }
+    }
+}
+
+///*
+// * Get a specific theme palette
+// */
+@mixin theme( $theme: $default-theme )
+{
+    @if map-has-key( $themes, $theme ) {
+        $name: $theme;
+        $theme: map-get( $themes, $theme );
+
+        @content( $name, map-get( $theme, 'colors' ), map-get( $theme, 'text-colors' ) );
+    }
+
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$themes}`. "
+        + "Please make sure it is defined in `$colors` map.";
+    }
+}

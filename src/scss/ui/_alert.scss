@@ -1,0 +1,25 @@
+// Alert
+:root
+{
+    --alert-background-color: var(--color-gray);
+    --alert-foreground-color: var(--color-gray-foreground);
+}
+
+.alert
+{
+    background-color: rgb(var(--alert-background-color), .75);
+    color: rgb(var(--alert-foreground-color));
+    box-sizing: border-box;
+    display: block;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+@include colors() using ( $key, $color, $text-color )
+{
+    .alert-#{$key}
+    {
+        --alert-background-color: #{"var(--color-" + $key + ")"};
+        --alert-foreground-color: #{"var(--color-" + $key + "-foreground)"};
+    }
+}

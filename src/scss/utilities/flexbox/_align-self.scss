@@ -1,0 +1,55 @@
+.align-self-start
+{
+    align-self: flex-start !important;
+}
+
+.align-self-end
+{
+    align-self: flex-end !important;
+}
+
+.align-self-center
+{
+    align-self: center !important;
+}
+
+.align-self-baseline
+{
+    align-self: baseline !important;
+}
+
+.align-self-stretch
+{
+    align-self: stretch !important;
+}
+
+@include breakpoints() using ( $name, $breakpoint )
+{
+    @media (min-width: #{$breakpoint})
+    {
+        #{".align-self-" + $name + "-start"}
+        {
+            align-self: flex-start !important;
+        }
+
+        #{".align-self-" + $name + "-end"}
+        {
+            align-self: flex-end !important;
+        }
+
+        #{".align-self-" + $name + "-center"}
+        {
+            align-self: center !important;
+        }
+
+        #{".align-self-" + $name + "-baseline"}
+        {
+            align-self: baseline !important;
+        }
+
+        #{".align-self-" + $name + "-stretch"}
+        {
+            align-self: stretch !important;
+        }
+    }
+}

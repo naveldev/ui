@@ -1,0 +1,90 @@
+body,
+html
+{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body
+{
+	font-weight: 400;
+    font-family: "CircularStd";
+    //background-color: #FCFCFC;
+    background-color: rgb( var(--color-light) );
+    color: rgb( var(--color-dark) );
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+img
+{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li
+    {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+button
+{
+    outline: 0;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+}
+
+input
+{
+    outline: 0;
+    font-family: inherit;
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+textarea
+{
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: normal;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+}
+
+.divider,
+hr
+{
+    position: relative;
+    display: block;
+    margin: 1em auto;
+    border: none;
+    border-top: 1px solid rgb(var(--color-dark), .25);
+
+    &:after
+    {
+        background: rgb(var(--color-light));
+        position: absolute;
+        content: attr(aria-label);
+        padding: 0 12px;
+        top: -12px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}

@@ -1,0 +1,27 @@
+/*
+ * Specific breakpoint
+ */
+@mixin breakpoint( $breakpoint )
+{
+    @if map-has-key( $screen-viewports, $breakpoint ) {
+        @media ( min-width: #{ map-get( $screen-viewports, $breakpoint ) } ) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+/*
+ * Breakpoints
+ */
+@mixin breakpoints()
+{
+    @each $name, $breakpoint in $screen-viewports
+    {
+        @content( $name, $breakpoint );
+    }
+}

@@ -1,0 +1,66 @@
+@include spacing-list() using ( $name, $value )
+{
+    // Padding
+    #{".p-" + $name}
+    {
+        padding: #{$value} !important;
+    }
+
+    #{".pb-" + $name},
+    #{".py-" + $name}
+    {
+        padding-bottom: #{$value} !important;
+    }
+
+    #{".pt-" + $name},
+    #{".py-" + $name}
+    {
+        padding-top: #{$value} !important;
+    }
+
+    #{".ps-" + $name},
+    #{".pl-" + $name},
+    #{".px-" + $name}
+    {
+        padding-left: #{$value} !important;
+    }
+
+    #{".pe-" + $name},
+    #{".pr-" + $name},
+    #{".px-" + $name}
+    {
+        padding-right: #{$value} !important;
+    }
+
+    // Margin
+    #{".m-" + $name}
+    {
+        margin: #{$value} !important;
+    }
+
+    #{".mb-" + $name},
+    #{".my-" + $name}
+    {
+        margin-bottom: #{$value} !important;
+    }
+
+    #{".mt-" + $name},
+    #{".my-" + $name}
+    {
+        margin-top: #{$value} !important;
+    }
+
+    #{".ms-" + $name},
+    #{".ml-" + $name},
+    #{".mx-" + $name}
+    {
+        margin-left: #{$value} !important;
+    }
+
+    #{".me-" + $name},
+    #{".mr-" + $name},
+    #{".mx-" + $name}
+    {
+        margin-right: #{$value} !important;
+    }
+}

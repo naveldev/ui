@@ -1,0 +1,25 @@
+/*
+ * Specific breakpoint
+ */
+@mixin spacing( $spacing )
+{
+    @if map-has-key( $spacing-table, $spacing ) {
+        @content( map-get( $spacing-table, $spacing ) );
+    }
+
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$spacing}`. "
+        + "Please make sure it is defined in `$spacing-table` map.";
+    }
+}
+
+/*
+ * Breakpoints
+ */
+@mixin spacing-list()
+{
+    @each $name, $value in $spacing-table
+    {
+        @content( $name, $value );
+    }
+}

@@ -1,0 +1,18 @@
+// Heading
+
+.heading
+{
+    position: relative;
+    height: 4rem;
+    padding-top: 2rem;
+
+    &:before
+    {
+        content: attr(aria-label);
+        color: rgba(var(--color-dark), .04);
+        position: absolute;
+        font-size: 4rem;
+        left: 0;
+        top: 0;
+    }
+}

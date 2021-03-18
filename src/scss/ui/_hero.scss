@@ -1,0 +1,34 @@
+// Hero
+:root
+{
+    --hero-background-color: var(--color-gray);
+    --hero-foreground-color: var(--color-gray-foreground);
+    --hero-border-color: var(--color-dark);
+}
+
+.hero
+{
+    background-color: rgb(var(--hero-background-color));
+    color: rgb(var(--hero-foreground-color));
+    min-height: 100px;
+
+    &.hero-soft
+    {
+        background-color: rgb(var(--hero-background-color), .25);
+        color: rgb(var(--hero-foreground-color));
+    }
+
+    &.hero-pull
+    {
+        margin-bottom: -50px;
+    }
+}
+
+@include colors() using ( $key, $color, $text-color )
+{
+    .hero-#{$key}
+    {
+        --hero-background-color: #{"var(--color-" + $key + ")"};
+        --hero-foreground-color: #{"var(--color-" + $key + "-foreground)"};
+    }
+}

@@ -1,0 +1,20 @@
+$name: 'dark'; // Theme name
+
+// Colors
+$colors: (
+    "light": "0, 0, 0",
+    "gray": "7, 7, 7",
+    "muted": "77, 77, 77",
+    "dark": "237, 233, 234",
+);
+
+// Text colors
+$text-colors: (
+    "light": "var(--color-dark)",
+    "gray": "var(--color-dark)",
+    "muted": "var(--color-light)",
+    "dark": "var(--color-light)",
+);
+
+// Add theme
+$themes: map-merge($themes, ($name: ('colors': $colors, 'text-colors': $text-colors)));

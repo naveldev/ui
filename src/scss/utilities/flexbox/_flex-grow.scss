@@ -1,0 +1,57 @@
+.flex-fill
+{
+    -ms-flex: 1 1 auto !important !important;
+    flex: 1 1 auto !important !important;
+}
+
+.flex-grow-0
+{
+    flex-grow: 0 !important;
+}
+
+.flex-shrink-0
+{
+    flex-shrink: 0 !important;
+}
+
+.flex-grow-1
+{
+    flex-grow: 1 !important;
+}
+
+.flex-shrink-1
+{
+    flex-shrink: 1 !important;
+}
+
+@include breakpoints() using ( $name, $breakpoint )
+{
+    @media (min-width: #{$breakpoint})
+    {
+        #{".flex-" + $name + "-fill"}
+        {
+            -ms-flex: 1 1 auto !important !important;
+            flex: 1 1 auto !important !important;
+        }
+
+        #{".flex-" + $name + "-grow-0"}
+        {
+            flex-grow: 0 !important;
+        }
+
+        #{".flex-" + $name + "-shrink-0"}
+        {
+            flex-shrink: 0 !important;
+        }
+
+        #{".flex-" + $name + "-grow-1"}
+        {
+            flex-grow: 1 !important;
+        }
+
+        #{".flex-" + $name + "-shrink-1"}
+        {
+            flex-shrink: 1 !important;
+        }
+    }
+}

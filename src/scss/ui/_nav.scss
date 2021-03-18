@@ -1,0 +1,110 @@
+:root
+{
+    --nav-background-color: var(--color-light);
+    --nav-foreground-color: var(--color-dark);
+    --nav-border-color: var(--color-gray);
+}
+
+nav.nav-top
+{
+    box-shadow: rgba(var(--card-shadow-color), .05) 0px 3px 3px -2px, rgba(var(--card-shadow-color), .025) 0px 3px 4px 0px, rgba(var(--card-shadow-color), .025) 0px 1px 8px 0px;
+    background-color: rgb(var(--nav-background-color));
+    color: rgb(var(--nav-foreground-color));
+    display: block;
+    position: relative;
+
+    .nav-branding
+    {
+        display: inline-block;
+        line-height: normal;
+        margin: 0;
+        padding: 10px 15px;
+
+        &:after
+        {
+            border-right: 1px solid rgb(var(--nav-border-color));
+            margin-left: 15px;
+            content: "";
+        }
+    }
+
+    ul.nav-items
+    {
+        display: inline-block;
+        margin: 0 10px;
+
+        li.nav-item
+        {
+            display: inline-block;
+        }
+
+        li.nav-button
+        {
+            display: inline-block;
+            padding: 6px 5px;
+        }
+
+        a.nav-link
+        {
+            color: rgba(var(--nav-foreground-color), .5);
+            padding: 16px 5px;
+            display: block;
+
+            &:hover
+            {
+                color: rgb(var(--nav-foreground-color));
+            }
+
+            &.active
+            {
+                color: rgb(var(--nav-foreground-color));
+                font-weight: 500;
+            }
+        }
+    }
+
+    .container
+    {
+        .nav-branding
+        {
+            margin: 0 -12px;
+        }
+
+        ul.nav-items:first-child
+        {
+            margin-left: -12px;
+        }
+
+        ul.nav-items:last-child:not(:nth-child(2))
+        {
+            margin-right: -12px;
+        }
+    }
+
+    &.nav-sticky
+    {
+        position: sticky;
+        top: 0;
+        z-index: 1002;
+    }
+
+    &.nav-transparent
+    {
+        box-shadow: none;
+    }
+}
+
+@include colors() using ( $key, $color, $text-color )
+{
+    .nav-#{$key}
+    {
+        --nav-background-color: #{"var(--color-" + $key + ")"};
+        --nav-foreground-color: #{"var(--color-" + $key + "-foreground)"};
+    }
+
+    .nav-#{$key}-inverted
+    {
+        --nav-background-color: #{"var(--color-" + $key + "-foreground)"};
+        --nav-foreground-color: #{"var(--color-" + $key + ")"};
+    }
+}

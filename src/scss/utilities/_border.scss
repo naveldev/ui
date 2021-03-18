@@ -1,0 +1,76 @@
+$border-table: (
+    "0": "0",
+    "1": "1px",
+    "2": "2px",
+    "3": "3px",
+    "4": "4px",
+    "5": "5px"
+);
+
+// Borders
+:root
+{
+    --border-color: var(--color-gray);
+}
+
+.border
+{
+    border: 1px solid rgba(var(--border-color), .15) !important;
+}
+
+.border-bottom
+{
+    border-bottom: 1px solid rgba(var(--border-color), .15) !important;
+}
+
+.border-top
+{
+    border-top: 1px solid rgba(var(--border-color), .15) !important;
+}
+
+.border-start
+{
+    border-left: 1px solid rgba(var(--border-color), .15) !important;
+}
+
+.border-end
+{
+    border-right: 1px solid rgba(var(--border-color), .15) !important;
+}
+
+// Border
+@each $name, $value in $border-table
+{
+    #{".border-" + $name}
+    {
+        border: #{$value} solid rgba(var(--border-color), .15) !important;
+    }
+
+    #{".border-bottom-" + $name}
+    {
+        border-bottom: #{$value} solid rgba(var(--border-color), .15) !important;
+    }
+
+    #{".border-top-" + $name}
+    {
+        border-top: #{$value} solid rgba(var(--border-color), .15) !important;
+    }
+
+    #{".border-start-" + $name}
+    {
+        border-left: #{$value} solid rgba(var(--border-color), .15) !important;
+    }
+
+    #{".border-end" + $name}
+    {
+        border-right: #{$value} solid rgba(var(--border-color), .15) !important;
+    }
+}
+
+@include colors() using ( $key, $color, $text-color )
+{
+    .border-#{$key}
+    {
+        --border-color: #{"var(--color-" + $key + ")"};
+    }
+}
