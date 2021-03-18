@@ -42,11 +42,11 @@
     }
 }
 
-@include colors() using ( $key, $color, $text-color )
+@include colors() using ( $color, $value )
 {
-    .card-#{$key}
+    .card-#{$color}
     {
-        --card-background-color: #{"var(--color-" + $key + ")"};
-        --card-foreground-color: #{"var(--color-" + $key + "-foreground)"};
+        --card-background-color: #{"var(--color-" + $color + ")"};
+        --card-foreground-color: #{"var(--color-" + $color + "-foreground)"};
     }
 }

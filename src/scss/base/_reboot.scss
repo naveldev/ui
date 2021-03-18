@@ -8,9 +8,8 @@ html
 
 body
 {
-	font-weight: 400;
-    font-family: "CircularStd";
-    //background-color: #FCFCFC;
+	font-weight: $font-weight;
+    font-family: $font-style;
     background-color: rgb( var(--color-light) );
     color: rgb( var(--color-dark) );
 }
@@ -66,25 +65,4 @@ textarea
     -moz-box-shadow: none;
     box-shadow: none;
     resize: none;
-}
-
-.divider,
-hr
-{
-    position: relative;
-    display: block;
-    margin: 1em auto;
-    border: none;
-    border-top: 1px solid rgb(var(--color-dark), .25);
-
-    &:after
-    {
-        background: rgb(var(--color-light));
-        position: absolute;
-        content: attr(aria-label);
-        padding: 0 12px;
-        top: -12px;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
 }

@@ -80,13 +80,13 @@
     width: 100%;
 }
 
-@include colors() using ( $key, $color, $text-color )
+@include colors() using ( $color, $value )
 {
-    .btn-#{$key}
+    .btn-#{$color}
     {
-        --button-background-color: #{"var(--color-" + $key + ")"};
-        --button-foreground-color: #{"var(--color-" + $key + "-foreground)"};
-        --button-secondary-color: #{"var(--color-" + $key + ")"};
-        --button-border-color: #{"var(--color-" + $key + ")"};
+        --button-background-color: #{"var(--color-" + $color + ")"};
+        --button-foreground-color: #{"var(--color-" + $color + "-foreground)"};
+        --button-secondary-color: #{"var(--color-" + $color + ")"};
+        --button-border-color: #{"var(--color-" + $color + ")"};
     }
 }

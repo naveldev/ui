@@ -67,10 +67,10 @@ $border-table: (
     }
 }
 
-@include colors() using ( $key, $color, $text-color )
+@include colors() using ( $color, $value )
 {
-    .border-#{$key}
+    .border-#{$color}
     {
-        --border-color: #{"var(--color-" + $key + ")"};
+        --border-color: #{"var(--color-" + $color + ")"};
     }
 }

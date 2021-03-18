@@ -15,11 +15,11 @@
     padding: 15px;
 }
 
-@include colors() using ( $key, $color, $text-color )
+@include colors() using ( $color, $value )
 {
-    .alert-#{$key}
+    .alert-#{$color}
     {
-        --alert-background-color: #{"var(--color-" + $key + ")"};
-        --alert-foreground-color: #{"var(--color-" + $key + "-foreground)"};
+        --alert-background-color: #{"var(--color-" + $color + ")"};
+        --alert-foreground-color: #{"var(--color-" + $color + "-foreground)"};
     }
 }

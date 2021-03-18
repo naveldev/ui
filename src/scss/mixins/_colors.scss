@@ -1,21 +1,13 @@
 ///*
 // * Loop through colors
 // */
- @mixin colors()
- {
-     @each $color, $value in $colors {
-         @content( $color, $value, map-get( $text-colors, $color ) );
-     }
- }
-
-///*
-// * Quick-fix for dark colors
-// */
-@mixin dark-colors()
+@mixin colors()
 {
-    @each $color, $value in $colors-dark {
-        @content( $color, $value, map-get( $text-colors-dark, $color ) );
-    }
+     @include theme() using ( $name, $colors, $text-colors ) {
+         @each $color, $value in $colors {
+             @content( $color, $value );
+         }
+     }
 }
 
 ///*

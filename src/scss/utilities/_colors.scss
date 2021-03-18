@@ -9,18 +9,6 @@
             #{"--color-" + $color + "-foreground"}: #{$value};
         }
     }
-
-    @each $color, $value in $colors {
-        #{".color-" + $color}
-        {
-            color: rgb(#{"var(--color-" + $color} + ")") !important;
-        }
-
-        #{".bg-" + $color}
-        {
-            background: rgb(#{"var(--color-" + $color} + ")") !important;
-        }
-    }
 }
 
 @include themes() using ( $name, $colors, $text-colors ) {
@@ -33,5 +21,19 @@
         @each $color, $value in $text-colors {
             #{"--color-" + $color + "-foreground"}: #{$value};
         }
+    }
+}
+
+@include colors() using ( $color, $value )
+{
+    #{".text-" + $color},
+    #{".color-" + $color}
+    {
+        color: rgb(#{"var(--color-" + $color} + ")") !important;
+    }
+
+    #{".bg-" + $color}
+    {
+        background: rgb(#{"var(--color-" + $color} + ")") !important;
     }
 }

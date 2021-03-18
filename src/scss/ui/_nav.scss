@@ -94,17 +94,17 @@ nav.nav-top
     }
 }
 
-@include colors() using ( $key, $color, $text-color )
+@include colors() using ( $color, $value )
 {
-    .nav-#{$key}
+    .nav-#{$color}
     {
-        --nav-background-color: #{"var(--color-" + $key + ")"};
-        --nav-foreground-color: #{"var(--color-" + $key + "-foreground)"};
+        --nav-background-color: #{"var(--color-" + $color + ")"};
+        --nav-foreground-color: #{"var(--color-" + $color + "-foreground)"};
     }
 
-    .nav-#{$key}-inverted
+    .nav-#{$color}-inverted
     {
-        --nav-background-color: #{"var(--color-" + $key + "-foreground)"};
-        --nav-foreground-color: #{"var(--color-" + $key + ")"};
+        --nav-background-color: #{"var(--color-" + $color + "-foreground)"};
+        --nav-foreground-color: #{"var(--color-" + $color + ")"};
     }
 }

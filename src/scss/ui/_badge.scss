@@ -17,11 +17,11 @@
     font-size: .8rem;
 }
 
-@include colors() using ( $key, $color, $text-color )
+@include colors() using ( $color, $value )
 {
-    .badge-#{$key}
+    .badge-#{$color}
     {
-        --badge-background-color: #{"var(--color-" + $key + ")"};
-        --badge-foreground-color: #{"var(--color-" + $key + "-foreground)"};
+        --badge-background-color: #{"var(--color-" + $color + ")"};
+        --badge-foreground-color: #{"var(--color-" + $color + "-foreground)"};
     }
 }
