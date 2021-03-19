@@ -16,16 +16,7 @@ nav.nav-top
     .nav-branding
     {
         display: inline-block;
-        line-height: normal;
-        margin: 0;
-        padding: 10px 15px;
-
-        &:after
-        {
-            border-right: 1px solid rgb(var(--nav-border-color));
-            margin-left: 15px;
-            content: "";
-        }
+        padding: 16px 15px;
     }
 
     ul.nav-items
@@ -67,7 +58,7 @@ nav.nav-top
     {
         .nav-branding
         {
-            margin: 0 -12px;
+            margin: 0 -15px;
         }
 
         ul.nav-items:first-child

@@ -2,11 +2,11 @@ $name: 'light'; // Theme name
 
 // Colors
 $colors: (
-    "primary": "3, 107, 252",
-    "info": "67, 155, 249",
-    "succes": "0, 184, 148",
-    "warning": "255, 183, 61",
-    "danger": "255, 55, 48",
+    "primary": "30, 112, 235",
+    "info": "30, 112, 235",
+    "success": "67, 215, 135",
+    "warning": "243, 179, 69",
+    "danger": "242, 32, 46",
     "light": "255, 255, 255",
     "gray": "218, 218, 218",
     "muted": "163, 163, 163",
@@ -18,11 +18,11 @@ $colors: (
 
 // Text colors
 $text-colors: (
-    "primary": "var(--color-light)",
-    "info": "var(--color-light)",
-    "succes": "var(--color-light)",
-    "warning": "var(--color-light)",
-    "danger": "var(--color-light)",
+    "primary": "255, 255, 255",
+    "info": "255, 255, 255",
+    "success": "255, 255, 255",
+    "warning": "255, 255, 255",
+    "danger": "255, 255, 255",
     "light": "var(--color-dark)",
     "gray": "var(--color-dark)",
     "muted": "var(--color-dark)",

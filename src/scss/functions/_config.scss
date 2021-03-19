@@ -1,0 +1,17 @@
+$settings: if($settings, $settings, ());
+
+@function config( $variable, $default_value ) {
+    @if map-has-key( $settings, $variable ) {
+        @return map-get( $settings, $variable );
+    }
+
+    @else {
+        @return $default_value;
+    }
+}
+
+@function set( $variable, $value ) {
+    $settings: map-merge($settings, ($variable: $value));
+
+    @return $value;
+}

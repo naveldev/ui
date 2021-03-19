@@ -32,7 +32,6 @@
         }
     }
 
-    &.btn-outline,
     &.btn-action
     {
         background-color: rgba(var(--button-background-color), 0);
@@ -57,9 +56,10 @@
         border-color: transparent;
     }
 
-    &.btn-outline
+    &.btn-rounded
     {
-        border-color: rgba(var(--button-secondary-color), .3);
+        border-radius: 2.5rem;
+        min-width: 40px;
     }
 }
 
