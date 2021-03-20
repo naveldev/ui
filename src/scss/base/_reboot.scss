@@ -10,8 +10,8 @@ body
 {
 	font-weight: config( "font-weight", 300 );
     font-family: config( "font-style", "Arial" );
-    background-color: config( "background", "rgb( var(--color-light) )" );
-    color: config( "color", "rgb( var(--color-dark) )" );
+    background-color: config( "background", rgb( var(--color-light) ) );
+    color: config( "color", rgb( var(--color-dark) ) );
 }
 
 *, ::after, ::before {
