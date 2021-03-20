@@ -43,7 +43,7 @@
             color: rgb(var(--button-secondary-color));
         }
 
-        .btn-active,
+        &.btn-active,
         &:active
         {
             background-color: rgba(var(--button-background-color), .45);
