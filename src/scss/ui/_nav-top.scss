@@ -15,14 +15,15 @@ nav.nav-top
 
     .nav-branding
     {
+        color: rgb(var(--nav-foreground-color));
         display: inline-block;
-        padding: 16px 15px;
+        padding: 12px 15px;
     }
 
     ul.nav-items
     {
         display: inline-block;
-        margin: 0 10px;
+        margin: 0;
 
         li.nav-item
         {
@@ -46,6 +47,7 @@ nav.nav-top
                 color: rgb(var(--nav-foreground-color));
             }
 
+            &.router-link-exact-active,
             &.active
             {
                 color: rgb(var(--nav-foreground-color));
@@ -60,16 +62,6 @@ nav.nav-top
         {
             margin: 0 -15px;
         }
-
-        ul.nav-items:first-child
-        {
-            margin-left: -12px;
-        }
-
-        ul.nav-items:last-child:not(:nth-child(2))
-        {
-            margin-right: -12px;
-        }
     }
 
     &.nav-sticky
@@ -81,7 +73,13 @@ nav.nav-top
 
     &.nav-transparent
     {
+        background-color: transparent;
         box-shadow: none;
+    }
+
+    &.nav-rounded
+    {
+        border-radius: 5px;
     }
 }
 

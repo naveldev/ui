@@ -12,6 +12,11 @@
     color: rgb(var(--hero-foreground-color));
     min-height: 100px;
 
+    &.hero-rounded
+    {
+        border-radius: 5px;
+    }
+
     &.hero-soft
     {
         background-color: rgb(var(--hero-background-color), .25);
