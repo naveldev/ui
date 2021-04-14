@@ -5,13 +5,13 @@ h4,
 h5,
 h6
 {
-    font-weight: 700;
+    font-weight: normal;
     margin: 0;
 }
 
 strong
 {
-
+    font-weight: 700;
 }
 
 p
@@ -26,6 +26,7 @@ a:hover,
 a:active,
 a:visited
 {
+    color: inherit;
     cursor: pointer;
     text-decoration: none;
 }

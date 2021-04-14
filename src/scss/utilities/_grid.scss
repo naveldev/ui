@@ -1,22 +1,3 @@
-.row,
-.form-row
-{
-    grid-gap: 0 $column-gap;
-    display: grid;
-    grid-template-columns: repeat(#{$column-width}, calc((100% - (#{$column-gap} * #{$column-width})) / #{$column-width}) );
-}
-
-.container
-{
-    //
-
-    .row,
-    .form-row
-    {
-        width: calc(100% + #{$column-gap});
-    }
-}
-
 /* For mobile users */
 @include breakpoint( "sm" ) {
     .container

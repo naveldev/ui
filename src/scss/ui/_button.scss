@@ -19,43 +19,26 @@
     display: inline-block;
     transition: .25s;
 
+    // Soft button
     &.btn-soft
     {
-        background-color: rgba(var(--button-background-color), .25);
-        color: rgb(var(--button-secondary-color));
         border-color: transparent;
-
-        &:hover
-        {
-            background-color: rgb(var(--button-background-color));
-            color: rgb(var(--button-foreground-color));
-        }
-    }
-
-    &.btn-action
-    {
         background-color: rgba(var(--button-background-color), 0);
         color: rgb(var(--button-secondary-color));
 
         &:hover
         {
-            background-color: rgba(var(--button-background-color), .35);
-            color: rgb(var(--button-secondary-color));
+            background-color: rgba(var(--button-background-color), .25);
         }
 
-        &.btn-active,
+        .btn-active,
         &:active
         {
-            background-color: rgba(var(--button-background-color), .45);
-            color: rgb(var(--button-secondary-color));
+            background-color: rgba(var(--button-background-color), .35);
         }
     }
 
-    &.btn-action
-    {
-        border-color: transparent;
-    }
-
+    // Rounded button
     &.btn-rounded
     {
         border-radius: 2.5rem;

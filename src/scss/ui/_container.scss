@@ -1,10 +1,25 @@
+.row,
+.form-row
+{
+    grid-gap: 0 $column-gap;
+    display: grid;
+    grid-template-columns: repeat(#{$column-width}, calc((100% - (#{$column-gap} * #{$column-width})) / #{$column-width}) );
+}
+
 .container
 {
+    position: relative;
     box-sizing: border-box;
-    width: 940px;
+    width: 1040px;
     max-width: 80%;
     display: block;
     margin: 0 auto;
+
+    .row,
+    .form-row
+    {
+        width: calc(100% + #{$column-gap});
+    }
 }
 
 .container:after,

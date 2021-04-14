@@ -10,7 +10,6 @@
 {
     background-color: rgb(var(--hero-background-color));
     color: rgb(var(--hero-foreground-color));
-    min-height: 100px;
 
     &.hero-rounded
     {
@@ -26,6 +25,11 @@
     &.hero-pull
     {
         margin-bottom: -50px;
+    }
+
+    &.hero-transparent
+    {
+        background-color: transparent;
     }
 }
 

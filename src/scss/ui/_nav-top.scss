@@ -17,7 +17,12 @@ nav.nav-top
     {
         color: rgb(var(--nav-foreground-color));
         display: inline-block;
-        padding: 12px 15px;
+        padding: 0 15px;
+
+        h1
+        {
+            padding: 12px 0;
+        }
     }
 
     ul.nav-items
@@ -80,6 +85,11 @@ nav.nav-top
     &.nav-rounded
     {
         border-radius: 5px;
+    }
+
+    a:hover
+    {
+        text-decoration: none;
     }
 }
 
