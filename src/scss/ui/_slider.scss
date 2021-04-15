@@ -1,0 +1,14 @@
+// Slider
+.slider
+{
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 -10px;
+
+    .slider-item
+    {
+        display: inline-block;
+        width: calc(33% - 15px);
+        margin: 10px;
+    }
+}
