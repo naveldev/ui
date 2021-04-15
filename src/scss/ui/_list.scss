@@ -1,0 +1,32 @@
+// List
+ul.list
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li
+    {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+ul.list-block
+{
+
+    li
+    {
+        display: block;
+    }
+}
+
+ul.list-inline
+{
+
+    li
+    {
+        display: inline-block;
+        padding: 0 6px;
+    }
+}
