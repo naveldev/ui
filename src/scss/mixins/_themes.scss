@@ -4,7 +4,7 @@
 @mixin themes( $list: $themes )
 {
     // Remove the default theme
-    $list: map-remove($list, $default-theme);
+    $list: map-remove($list, config('default-theme', $default-theme));
 
     // Loop through the themes, and return the [$name], [$colors], [$text-colors]
     @each $theme, $test in $list {
@@ -17,7 +17,7 @@
 ///*
 // * Get a specific theme palette
 // */
-@mixin theme( $theme: $default-theme )
+@mixin theme( $theme: config('default-theme', $default-theme) )
 {
     @if map-has-key( $themes, $theme ) {
         $name: $theme;
