@@ -7,18 +7,21 @@
  */
 
 import * as Components from "./components";
+import Forms from "./plugins/forms";
 
 export class Class
 {
 	static install(Vue, options = {})
 	{
-		this.registerComponents(Vue);
+		this.registerComponents(Vue)
 	}
 
 	static registerComponents(Vue)
 	{
-		Object.values(Components).forEach(c => Vue.component(c.name, c));
+		Object.values(Components).forEach(c => Vue.component(c.name, c))
 	}
 }
 
-export default Class;
+export const Form = Forms
+
+export const NavelUI = Class
