@@ -8,7 +8,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
-    "vue": "^2.6.12"
+    "axios": "^0.21.1"
   }
 }
