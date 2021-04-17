@@ -1,9 +1,9 @@
 :root
 {
-    --button-background-color: var(--color-muted);
-    --button-foreground-color: var(--color-muted-foreground);
-    --button-secondary-color: var(--color-muted-foreground);
-    --button-border-color: var(--color-muted);
+    --button-background-color: var(--color-gray);
+    --button-foreground-color: var(--color-gray-foreground);
+    --button-secondary-color: var(--color-gray-foreground);
+    --button-border-color: var(--color-gray);
 }
 
 .btn
@@ -28,13 +28,27 @@
 
         &:hover
         {
-            background-color: rgba(var(--button-background-color), .25);
+            background-color: rgba(var(--button-background-color), .5);
         }
 
         .btn-active,
         &:active
         {
-            background-color: rgba(var(--button-background-color), .35);
+            background-color: rgba(var(--button-background-color), .75);
+        }
+    }
+
+    // Button Action
+    &.btn-action
+    {
+        border-color: transparent;
+        background-color: rgba(var(--button-background-color), .5);
+        color: rgb(var(--button-secondary-color));
+
+        .btn-active,
+        &:active
+        {
+            background-color: rgba(var(--button-background-color), .6);
         }
     }
 
