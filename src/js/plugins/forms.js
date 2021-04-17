@@ -24,7 +24,7 @@ class Class
      */
     async post( url ) {
         await axios.post(url, this).then(response => {
-            this.saveResponse( response.response ?? response )
+            this.saveResponse( response )
         }).catch(error => {
             this.saveResponse( error.response )
         })
@@ -40,7 +40,7 @@ class Class
      */
     async patch( url ) {
         await axios.patch(url, this).then(response => {
-            this.saveResponse( response.response ?? response )
+            this.saveResponse( response )
         }).catch(error => {
             this.saveResponse( error.response )
         })
@@ -56,7 +56,7 @@ class Class
      */
     async get( url ) {
         await axios.get(url + '?' + new URLSearchParams(this).toString(), this).then(response => {
-            this.saveResponse( response.response ?? response )
+            this.saveResponse( response )
         }).catch(error => {
             this.saveResponse( error.response )
         })
