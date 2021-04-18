@@ -23,11 +23,9 @@ class Class
      * @return {Promise}     [description]
      */
     async post( url ) {
-        await axios.post(url, this).then(response => {
-            this.saveResponse( response )
-        }).catch(error => {
-            this.saveResponse( error.response )
-        })
+        let response = await axios.post(url, this)
+
+        this.parseRequest( response )
 
         return this
     }
@@ -39,11 +37,9 @@ class Class
      * @return {Promise}     [description]
      */
     async patch( url ) {
-        await axios.patch(url, this).then(response => {
-            this.saveResponse( response )
-        }).catch(error => {
-            this.saveResponse( error.response )
-        })
+        let response = await axios.patch(url, this)
+
+        this.parseRequest( response )
 
         return this
     }
@@ -55,27 +51,25 @@ class Class
      * @return {Promise}     [description]
      */
     async get( url ) {
-        await axios.get(url + '?' + new URLSearchParams(this).toString(), this).then(response => {
-            this.saveResponse( response )
-        }).catch(error => {
-            this.saveResponse( error.response )
-        })
+        let response = await axios.get(url, this)
+
+        this.parseRequest( response )
 
         return this
     }
 
     /**
-     * [saveResponse description]
+     * [parseRequest description]
      *
      * @param  {[type]} response [description]
      * @return {[type]}          [description]
      */
-    saveResponse( response ) {
+    parseRequest( response ) {
         const { data, status } = response
 
         this.data = data
         this.status = status
-        this.errors = this.errors || []
+        this.errors = []
 
         if( this.data.errors ) {
             Object.keys(this.data.errors).map( (error, index) => Vue.set(this.errors, error, this.data.errors[error][0]) )
