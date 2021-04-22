@@ -10,6 +10,7 @@ $colors: (
 
     "light": "14, 14, 14",
     "gray": "7, 7, 7",
+    "light-gray": "25, 25, 25",
     "muted": "77, 77, 77",
     "dark": "237, 233, 234",
 
@@ -26,9 +27,10 @@ $text-colors: (
 
     "light": "var(--color-dark)",
     "gray": "var(--color-dark)",
+    "light-gray": "var(--color-dark)",
     "muted": "var(--color-dark)",
     "dark": "var(--color-light)",
-    
+
     "steam": "255, 255, 255",
 );
 
