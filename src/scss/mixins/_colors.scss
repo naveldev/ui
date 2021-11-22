@@ -3,11 +3,9 @@
 // */
 @mixin colors()
 {
-     @include theme() using ( $name, $colors, $text-colors ) {
-         @each $color, $value in $colors {
-             @content( $color, $value );
-         }
-     }
+	@each $color, $value in $colors {
+		@content( $color, $value );
+	}
 }
 
 ///*

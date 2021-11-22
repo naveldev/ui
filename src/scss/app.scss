@@ -5,20 +5,11 @@
  * Copyrights (c) navel.dev 2020
  */
 
-@use "sass:list";
-@use "sass:map";
-
 // Config
 @import 'config/config';
 
 // Mixin
 @import 'mixins/mixins';
-
-// Functions
-@import 'functions/functions';
-
-// Themes
-@import 'themes/themes';
 
 // Base
 @import 'base/base';

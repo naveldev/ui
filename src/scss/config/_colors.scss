@@ -1,5 +1,3 @@
-$name: 'light'; // Theme name
-
 // Colors
 $colors: (
     "primary": "30, 112, 235",
@@ -34,6 +32,3 @@ $text-colors: (
     // Brands
     "steam": "255, 255, 255",
 );
-
-// Add theme
-$themes: map-merge($themes, ($name: ('colors': $colors, 'text-colors': $text-colors)));

@@ -1,27 +1,12 @@
-@include theme() using ( $name, $colors, $text-colors ) {
-    :root
-    {
-        @each $color, $value in $colors {
-            #{"--color-" + $color}: #{$value};
-        }
+:root
+{
+	@each $color, $value in $colors {
+		#{"--color-" + $color}: #{$value};
+	}
 
-        @each $color, $value in $text-colors {
-            #{"--color-" + $color + "-foreground"}: #{$value};
-        }
-    }
-}
-
-@include themes() using ( $name, $colors, $text-colors ) {
-    #{".theme-" + $name}
-    {
-        @each $color, $value in $colors {
-            #{"--color-" + $color}: #{$value};
-        }
-
-        @each $color, $value in $text-colors {
-            #{"--color-" + $color + "-foreground"}: #{$value};
-        }
-    }
+	@each $color, $value in $text-colors {
+		#{"--color-" + $color + "-foreground"}: #{$value};
+	}
 }
 
 @include colors() using ( $color, $value )
