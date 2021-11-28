@@ -58,6 +58,47 @@
         border-radius: 2.5rem;
         min-width: 40px;
     }
+
+	// Loading state
+	&.btn-loading
+	{
+		display: inline-block;
+		position: relative;
+		color: transparent;
+
+		&:before,
+		&:after
+		{
+			position: absolute;
+			z-index: 999999;
+			content: "";
+			left: 0;
+			top: 0;
+		}
+
+		&:before
+		{
+			background: rgba(255, 255, 255, .3);
+			border-radius: inherit;
+			left: -1px;
+			right: -1px;
+			bottom: -1px;
+			top: -1px;
+		}
+
+		&:after
+		{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			margin: 2px calc(50% - (34px / 2));
+			border: 4px solid rgb(var(--button-foreground-color));
+			border-radius: 50%;
+			animation: btn-loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+			animation-delay: -0.40s;
+			border-color: #fff transparent transparent transparent;
+		}
+	}
 }
 
 .btn-small
@@ -86,4 +127,14 @@
         --button-secondary-color: #{"var(--color-" + $color + ")"};
         --button-border-color: #{"var(--color-" + $color + ")"};
     }
+}
+
+@keyframes btn-loading-ring
+{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
