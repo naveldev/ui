@@ -1,12 +1,15 @@
-.form-label
+.form-group
 {
-    font-weight: 500;
-    display: block;
+	.form-label
+	{
+		font-weight: 600;
+		display: block;
+	}
 }
 
 .form-control
 {
-    border: 1px solid rgb(var(--color-gray));
+    border: 2px solid rgb(var(--color-gray));
     background: rgb(var(--color-light));
     color: rgb(var(--color-light-foreground));
     border-radius: 5px;
