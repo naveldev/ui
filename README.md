@@ -10,13 +10,16 @@ Step 1: Install the package.
 npm install https://github.com/naveldev/ui.git
 ```
 
-Step 2: Include the complete CSS library using ES6
+Step 2: Import the SCSS library
 
 ```
-import "@naveldev/ui";
+@import "@naveldev/ui";
 ```
 
-Or include specific modules you would like to include;
+## Vue Components
+
+NavelUI has some pre-defined Vue.js components ready to use, you can import the components one by one using the following example;
+
 ```
 import { Component, Component2 } from "@naveldev/ui";
 ```

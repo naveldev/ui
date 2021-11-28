@@ -6,5 +6,7 @@
  * Copyrights (c) navel.dev 2020
  */
 
-console.log("test");
-export { default as App } from '../scss/app.scss'
+console.info("NavelUI@latest loaded...");
+console.info("Copyrights (c) navel.dev 2020");
+
+export { default as Button } from './components/Button.vue'
