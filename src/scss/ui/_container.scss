@@ -1,6 +1,7 @@
 .row,
 .form-row
 {
+	width: 100%;
     grid-gap: 0 $column-gap;
     display: grid;
     grid-template-columns: repeat(#{$column-width}, calc((100% - (#{$column-gap} * #{$column-width})) / #{$column-width}) );
