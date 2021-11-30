@@ -13,6 +13,7 @@
     color: rgb(var(--card-foreground-color));
     box-sizing: border-box;
     border-radius: 3px;
+	overflow: hidden;
 
     .card-content
     {
