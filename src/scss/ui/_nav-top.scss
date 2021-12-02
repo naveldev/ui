@@ -1,109 +1,110 @@
 :root
 {
-    --nav-background-color: var(--color-light);
-    --nav-foreground-color: var(--color-dark);
-    --nav-shadow-color: var(--color-muted);
+	--nav-background-color: var(--color-light);
+	--nav-foreground-color: var(--color-dark);
+	--nav-shadow-color: var(--color-muted);
 }
 
 nav.nav-top
 {
-    //box-shadow: rgba(var(--nav-shadow-color), .025) 0px 3px 3px -2px, rgba(var(--nav-shadow-color), .025) 0px 3px 4px 0px, rgba(var(--nav-shadow-color), .05) 0px 1px 8px 0px;
-    background-color: rgb(var(--nav-background-color));
-    color: rgb(var(--nav-foreground-color));
-    position: relative;
+	//box-shadow: rgba(var(--nav-shadow-color), .025) 0px 3px 3px -2px, rgba(var(--nav-shadow-color), .025) 0px 3px 4px 0px, rgba(var(--nav-shadow-color), .05) 0px 1px 8px 0px;
+	background-color: rgb(var(--nav-background-color));
+	color: rgb(var(--nav-foreground-color));
+	position: relative;
 
-    .nav-branding
-    {
-        color: rgb(var(--nav-foreground-color));
-        display: inline-block;
-        padding: 0 15px;
+	.nav-branding
+	{
+		color: rgb(var(--nav-foreground-color));
+		display: inline-block;
+		padding: 0 15px;
 
-        h1
-        {
-            padding: 12px 0;
-        }
-    }
+		h1
+		{
+			padding: 12px 0;
+		}
+	}
 
-    ul.nav-items
-    {
-        display: inline-block;
-        margin: 0;
-        padding: 0;
+	ul.nav-items
+	{
+		display: inline-block;
+		margin: 0;
+		padding: 0;
 
-        li.nav-item
-        {
-            display: inline-block;
-        }
+		li.nav-item
+		{
+			display: inline-block;
+		}
 
-        li.nav-button
-        {
-            display: inline-block;
-            padding: 6px 5px;
-        }
+		li.nav-button
+		{
+			display: inline-block;
+			padding: 6px 5px;
+		}
 
-        a.nav-link
-        {
-            color: rgba(var(--nav-foreground-color), .5);
-            padding: 12px 12px;
-            display: block;
+		a.nav-link
+		{
+			color: rgba(var(--nav-foreground-color), .5);
+			padding: 12px 12px;
+			display: block;
 
-            &:hover
-            {
-                color: rgb(var(--nav-foreground-color));
-            }
+			&:hover
+			{
+				color: rgb(var(--nav-foreground-color));
+			}
 
-            &.router-link-exact-active,
-            &.active
-            {
-                color: rgb(var(--nav-foreground-color));
-                font-weight: 500;
-            }
-        }
-    }
+			&.router-link-exact-active,
+			&.active
+			{
+				color: rgb(var(--nav-foreground-color));
+				font-weight: 500;
+			}
+		}
+	}
 
-    .container
-    {
-        .d-flex
-        {
-            margin: 0 -15px;
-        }
-    }
+	.container
+	{
+		.d-flex
+		{
+			margin: 0 -15px;
+		}
+	}
 
-    &.nav-sticky
-    {
-        position: sticky;
-        top: 0;
-        z-index: 1002;
-    }
+	&.nav-sticky
+	{
+		position: sticky;
+		top: 0;
+		z-index: 1002;
+	}
 
-    &.nav-transparent
-    {
-        background-color: transparent;
-        box-shadow: none;
-    }
+	&.nav-transparent
+	{
+		background-color: transparent;
+		box-shadow: none;
+	}
 
-    &.nav-rounded
-    {
-        border-radius: 5px;
-    }
+	&.nav-rounded
+	{
+		border-radius: 5px;
+	}
 
-    a:hover
-    {
-        text-decoration: none;
-    }
+	a,
+	a:hover
+	{
+		text-decoration: none;
+	}
 }
 
 @include colors() using ( $color, $value )
 {
-    .nav-#{$color}
-    {
-        --nav-background-color: #{"var(--color-" + $color + ")"};
-        --nav-foreground-color: #{"var(--color-" + $color + "-foreground)"};
-    }
+	.nav-#{$color}
+	{
+		--nav-background-color: #{"var(--color-" + $color + ")"};
+		--nav-foreground-color: #{"var(--color-" + $color + "-foreground)"};
+	}
 
-    .nav-#{$color}-inverted
-    {
-        --nav-background-color: #{"var(--color-" + $color + "-foreground)"};
-        --nav-foreground-color: #{"var(--color-" + $color + ")"};
-    }
+	.nav-#{$color}-inverted
+	{
+		--nav-background-color: #{"var(--color-" + $color + "-foreground)"};
+		--nav-foreground-color: #{"var(--color-" + $color + ")"};
+	}
 }

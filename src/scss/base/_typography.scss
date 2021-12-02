@@ -5,20 +5,20 @@ h4,
 h5,
 h6
 {
-    font-weight: normal;
-    margin: 0;
+	font-weight: normal;
+	margin: 0;
 }
 
 strong
 {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 p
 {
-    display: block;
-    margin: 0;
-    line-height: 1.5rem;
+	display: block;
+	margin: 0;
+	line-height: 1.5rem;
 }
 
 a,
@@ -26,7 +26,12 @@ a:hover,
 a:active,
 a:visited
 {
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
 }
