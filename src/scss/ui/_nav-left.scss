@@ -42,10 +42,16 @@ nav.nav-left
 				display: block;
 				padding: 15px;
 
-				&:active,
 				&:hover
 				{
 					color: rgb(var(--nav-foreground-color));
+				}
+	
+				&.router-link-exact-active,
+				&.active
+				{
+					color: rgb(var(--nav-foreground-color));
+					font-weight: bold;
 				}
 			}
 
@@ -53,8 +59,8 @@ nav.nav-left
 			{
 				color: rgba(var(--nav-foreground-color), 1);
 				font-size: 22px;
-				padding: 5px;
-				width: 30px;
+				padding: 0 10px;
+				width: 40px;
 				box-sizing: border-box;
 				text-align: center;
 				display: inline-block;
