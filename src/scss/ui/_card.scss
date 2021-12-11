@@ -8,7 +8,7 @@
 
 .card
 {
-    box-shadow: rgba(var(--color-dark), .10) 0px 1px 1px 1px;
+	border: 1px solid rgb(var(--card-secondary-color));
     background: rgb(var(--card-background-color));
     color: rgb(var(--card-foreground-color));
     box-sizing: border-box;
