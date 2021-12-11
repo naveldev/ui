@@ -7,10 +7,10 @@ html
 
 body
 {
-	font-weight: 300;
-    font-family: "Roboto", sans-serif;
-    background-color: rgb(var(--color-light));
-    color: rgb(var(--color-dark));
+	font-weight: $font-weight;
+    font-family: $font-family;
+    background-color: $background-color;
+    color: $text-color;
 }
 
 *, ::after, ::before {
