@@ -1,0 +1,38 @@
+:root
+{
+	--table-background-color: var(--color-light);
+	--table-foreground-color: var(--color-light-foreground);
+	--table-secondary-color: var(--color-light-gray);
+}
+
+table.table
+{
+	border-collapse: collapse;
+	width: 100%;
+	
+	tbody
+	{
+		//
+		
+		tr
+		{
+			//
+
+			&:hover
+			{
+				background-color: rgb(var(--table-secondary-color));
+			}
+		}
+	}
+
+	tr
+	{
+		border-bottom: 1px solid rgb(var(--table-secondary-color));
+	}
+
+	td, th
+	{
+		text-align: left;
+		padding: 15px;
+	}
+}
