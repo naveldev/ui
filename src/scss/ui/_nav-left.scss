@@ -1,14 +1,14 @@
 :root
 {
     --nav-background-color: var(--color-light);
-    --nav-foreground-color: var(--color-dark);
-    --nav-shadow-color: var(--color-muted);
+    --nav-foreground-color: var(--color-light-foreground);
+    --nav-secondary-color: var(--color-muted);
 }
 
 
 nav.nav-left
 {
-	box-shadow: rgba(var(--nav-shadow-color), .025) 0px 3px 3px -2px, rgba(var(--nav-shadow-color), .025) 0px 3px 4px 0px, rgba(var(--nav-shadow-color), .05) 0px 1px 8px 0px;
+	box-shadow: rgba(var(--nav-secondary-color), .025) 0px 3px 3px -2px, rgba(var(--nav-secondary-color), .025) 0px 3px 4px 0px, rgba(var(--nav-secondary-color), .05) 0px 1px 8px 0px;
 	background-color: rgb(var(--nav-background-color));
     color: rgb(var(--nav-foreground-color));
     position: relative;
