@@ -92,6 +92,19 @@ nav.nav-top
 	{
 		text-decoration: none;
 	}
+	
+	.container
+	{
+		> *:first-child
+		{
+			margin-left: -15px;
+		}
+
+		> *:last-child
+		{
+			margin-right: -15px;
+		}	
+	}
 }
 
 @include colors() using ( $color, $value )
