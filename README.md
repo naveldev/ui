@@ -7,13 +7,13 @@ Comming soon...
 Step 1: Install the package.
 
 ```
-npm install https://github.com/naveldev/ui.git
+npm i naviisml/ui
 ```
 
 Step 2: Import the SCSS library
 
 ```
-@import "@naveldev/ui";
+@import "@naviisml/ui";
 ```
 
 ## Vue Components
@@ -21,5 +21,5 @@ Step 2: Import the SCSS library
 NavelUI has some pre-defined Vue.js components ready to use, you can import the components one by one using the following example;
 
 ```
-import { Component, Component2 } from "@naveldev/ui";
+import { Component, Component2 } from "@naviisml/ui";
 ```
