@@ -7,13 +7,13 @@ Comming soon...
 Step 1: Install the package.
 
 ```
-npm i naviisml/ui
+npm i naveldev/ui
 ```
 
 Step 2: Import the SCSS library
 
 ```
-@import "@naviisml/ui";
+@import "@naveldev/ui";
 ```
 
 ## Vue Components
