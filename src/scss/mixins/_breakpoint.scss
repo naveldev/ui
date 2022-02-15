@@ -5,7 +5,7 @@
 {
     @if map-has-key( $screen-viewports, $breakpoint ) {
         @media ( min-width: #{ map-get( $screen-viewports, $breakpoint ) } ) {
-            @content;
+            @content( $breakpoint, map-get( $screen-viewports, $breakpoint ) );
         }
     }
 
@@ -22,6 +22,8 @@
 {
     @each $name, $breakpoint in $screen-viewports
     {
-        @content( $name, $breakpoint );
+        @media ( min-width: #{ map-get( $screen-viewports, $breakpoint ) } ) {
+            @content( $name, $breakpoint );
+        }
     }
 }

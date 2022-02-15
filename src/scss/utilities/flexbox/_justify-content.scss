@@ -25,31 +25,28 @@
 
 @include breakpoints() using ( $name, $breakpoint )
 {
-    @media (min-width: #{$breakpoint})
-    {
-        #{".justify-content-" + $name + "-start"}
-        {
-            justify-content: flex-start !important;
-        }
+	#{".justify-content-" + $name + "-start"}
+	{
+		justify-content: flex-start !important;
+	}
 
-        #{".justify-content-" + $name + "-end"}
-        {
-            justify-content: flex-end !important;
-        }
+	#{".justify-content-" + $name + "-end"}
+	{
+		justify-content: flex-end !important;
+	}
 
-        #{".justify-content-" + $name + "-center"}
-        {
-            justify-content: center !important;
-        }
+	#{".justify-content-" + $name + "-center"}
+	{
+		justify-content: center !important;
+	}
 
-        #{".justify-content-" + $name + "-between"}
-        {
-            justify-content: space-between !important;
-        }
+	#{".justify-content-" + $name + "-between"}
+	{
+		justify-content: space-between !important;
+	}
 
-        #{".justify-content-" + $name + "-around"}
-        {
-            justify-content: space-around !important;
-        }
-    }
+	#{".justify-content-" + $name + "-around"}
+	{
+		justify-content: space-around !important;
+	}
 }
