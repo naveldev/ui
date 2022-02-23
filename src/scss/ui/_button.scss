@@ -101,6 +101,14 @@
 	}
 }
 
+a.btn,
+a.btn:hover,
+.btn a,
+.btn a:hover
+{
+	text-decoration: none;
+}
+
 .btn-small
 {
     font-size: 14px;
