@@ -20,23 +20,26 @@
 
 @include breakpoints() using ( $name, $breakpoint )
 {
-	#{".flex-" + $name + "-row"}
-	{
-		flex-direction: row !important;
-	}
+	@media (min-width: #{$breakpoint})
+    {
+		#{".flex-" + $name + "-row"}
+		{
+			flex-direction: row !important;
+		}
 
-	#{".flex-" + $name + "-row-reverse"}
-	{
-		flex-direction: row-reverse !important;
-	}
+		#{".flex-" + $name + "-row-reverse"}
+		{
+			flex-direction: row-reverse !important;
+		}
 
-	#{".flex-" + $name + "-column"}
-	{
-		flex-direction: column !important;
-	}
+		#{".flex-" + $name + "-column"}
+		{
+			flex-direction: column !important;
+		}
 
-	#{".flex-" + $name + "-column-reverse"}
-	{
-		flex-direction: column-reverse !important;
+		#{".flex-" + $name + "-column-reverse"}
+		{
+			flex-direction: column-reverse !important;
+		}
 	}
 }

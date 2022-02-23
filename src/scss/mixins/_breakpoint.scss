@@ -4,9 +4,7 @@
 @mixin breakpoint( $breakpoint )
 {
     @if map-has-key( $screen-viewports, $breakpoint ) {
-        @media ( min-width: #{ map-get( $screen-viewports, $breakpoint ) } ) {
-            @content( $breakpoint, map-get( $screen-viewports, $breakpoint ) );
-        }
+		@content( $breakpoint, map-get( $screen-viewports, $breakpoint ) );
     }
 
     @else {
@@ -22,8 +20,6 @@
 {
     @each $name, $breakpoint in $screen-viewports
     {
-        @media ( min-width: #{ map-get( $screen-viewports, $breakpoint ) } ) {
-            @content( $name, $breakpoint );
-        }
+		@content( $name, $breakpoint );
     }
 }

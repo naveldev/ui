@@ -25,28 +25,31 @@
 
 @include breakpoints() using ( $name, $breakpoint )
 {
-	#{".align-items-" + $name + "-start"}
-	{
-		align-items: flex-start !important;
-	}
+	@media (min-width: #{$breakpoint})
+    {
+		#{".align-items-" + $name + "-start"}
+		{
+			align-items: flex-start !important;
+		}
 
-	#{".align-items-" + $name + "-end"}
-	{
-		align-items: flex-end !important;
-	}
+		#{".align-items-" + $name + "-end"}
+		{
+			align-items: flex-end !important;
+		}
 
-	#{".align-items-" + $name + "-center"}
-	{
-		align-items: center !important;
-	}
+		#{".align-items-" + $name + "-center"}
+		{
+			align-items: center !important;
+		}
 
-	#{".align-items-" + $name + "-baseline"}
-	{
-		align-items: baseline !important;
-	}
+		#{".align-items-" + $name + "-baseline"}
+		{
+			align-items: baseline !important;
+		}
 
-	#{".align-items-" + $name + "-stretch"}
-	{
-		align-items: stretch !important;
+		#{".align-items-" + $name + "-stretch"}
+		{
+			align-items: stretch !important;
+		}
 	}
 }
