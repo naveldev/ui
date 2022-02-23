@@ -27,8 +27,6 @@ nav.nav-left
 	ul.nav-list
 	{
 		display: block;
-		overflow: hidden;
-		min-width: 200px;
 		margin: 0;
 		padding: 0;
 
@@ -66,10 +64,10 @@ nav.nav-left
 				display: inline-block;
 			}
 		}
-
-		&.is-active
+		
+		.dropdown
 		{
-			width: 100px;
+			display: block;
 		}
 	}
 
