@@ -10,7 +10,10 @@ nav.nav-top
 	box-shadow: rgba(var(--nav-shadow-color), .25) 0px 3px 3px -2px;
 	background-color: rgb(var(--nav-background-color));
 	color: rgb(var(--nav-foreground-color));
+	transform: translate3d(0, 0, 0);
+	transition: 0.25s all;
 	position: relative;
+	min-height: 50px;
 
 	.nav-branding
 	{
@@ -69,6 +72,27 @@ nav.nav-top
 		}
 	}
 
+	// fixed on top
+	&.nav-fixed
+	{
+		position: fixed;
+		width: 100%;
+		z-index: 99999;
+		top: 0;
+	}
+
+	&.nav-fixed + * {
+		margin-top: 50px;
+	}
+
+	// hide navigation
+	&.nav-hidden
+	{
+		box-shadow: none;
+		transform: translate3d(0, -100%, 0);
+	}
+
+	// stick within element
 	&.nav-sticky
 	{
 		position: sticky;
@@ -76,6 +100,7 @@ nav.nav-top
 		z-index: 1002;
 	}
 
+	// transparent navigation
 	&.nav-transparent
 	{
 		background-color: transparent;

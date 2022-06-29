@@ -52,6 +52,20 @@
         }
     }
 
+    // Outline
+    &.btn-outline
+    {
+        border-color: rgb(var(--button-background-color));
+        background-color: transparent;
+        color: rgb(var(--button-secondary-color));
+
+        &.btn-active,
+        &:active
+        {
+            background-color: rgba(var(--button-background-color), .6);
+        }
+    }
+
     // Rounded button
     &.btn-rounded
     {

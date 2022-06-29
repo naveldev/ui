@@ -8,6 +8,7 @@
 
 .card
 {
+    box-shadow: 0 1px 3px rgb(var(--card-secondary-color)), 0 1px 2px rgb(var(--card-secondary-color));
 	border: 1px solid rgb(var(--card-secondary-color));
     background: rgb(var(--card-background-color));
     color: rgb(var(--card-foreground-color));
@@ -15,9 +16,31 @@
     border-radius: 3px;
 	overflow: hidden;
 
+    .card-heading
+    {
+        padding: 20px;
+        position: relative;
+
+        &:not(:last-child):after
+        {
+            border-top: 1px solid rgb(var(--card-secondary-color));
+            position: absolute;
+            content: "";
+            width: 100%;
+            bottom: 0;
+        }
+    }
+
     .card-content
     {
-        padding: 15px;
+        padding: 20px;
+    }
+
+    .card-footer
+    {
+        background-color: rgba(var(--card-secondary-color), .35);
+        border-width: 80%;
+        padding: 20px;
     }
 
     &.card-soft
